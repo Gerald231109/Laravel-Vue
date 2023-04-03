@@ -19,6 +19,10 @@ export default createStore({
       },
       whoAreYou(state){
           state.robotCheck = false
+      },
+      clearForm(state){
+          state.name = ""
+          state.text = ""
       }
   },
   actions: {
@@ -44,6 +48,7 @@ export default createStore({
         DataServices.createComment(comment)
             .then(response => {
                 context.dispatch('getComments')
+                context.commit('clearForm')
                 console.log(response.data)
             })
             .catch(e => {
