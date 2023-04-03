@@ -8,7 +8,7 @@ class CommentCRUDController extends Controller
 {
     public function index()
     {
-        $data = Comment::all();
+        $data = Comment::orderBy('created_at', 'desc')->get();
         return ($data);
     }
 
