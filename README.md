@@ -9,3 +9,4 @@
 Для запуска server используйте: <h3>"php artisan serve"</h3>
 Для запуска client используйте: <h3>"npm run serve"</h3>
  
+!Капча работает только при открытии сайта с localhost
