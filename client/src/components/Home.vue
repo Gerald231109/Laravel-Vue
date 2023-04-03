@@ -1,7 +1,10 @@
 <template>
   <v-parallax src="../static/background.jpg">
     <v-sheet color="transparent" class="ma-10">
-      <v-img class="picture" src="../static/David.jpg"></v-img>
+      <v-img class="picture"
+             src="../static/David.jpg"
+             lazy-src="../static/placeholder.png">
+      </v-img>
       <v-divider class="my-10 border-opacity-50" color="white"></v-divider>
       <v-form @submit.prevent>
         <v-sheet rounded max-width="600" class="mx-auto">
@@ -31,6 +34,7 @@
                          hl="ru"
                          @verify="man"
                          @expire="who"
+                         @fail="robot"
                          ref="vueRecaptcha">
           </vue-recaptcha>
         </v-sheet>
@@ -73,7 +77,8 @@ export default {
 
     ...mapMutations({
       man: "imaMAN",
-      who: "whoAreYou"
+      who: "whoAreYou",
+      robot: "robot"
     }),
 
   },

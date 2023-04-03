@@ -7,6 +7,7 @@ export default createStore({
     name: "",
     text: "",
     robotCheck: false,
+    alert: false,
   },
   mutations: {
       dateFormat(state) {
@@ -23,6 +24,9 @@ export default createStore({
       clearForm(state){
           state.name = ""
           state.text = ""
+      },
+      robot(state){
+          state.alert = true
       }
   },
   actions: {
