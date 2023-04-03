@@ -87,6 +87,6 @@ export default {
 .picture {
   border-width: 5px;
   border-style: solid;
-  border-image: linear-gradient(to right, #000000, #FFD700 ) 2;
+  border-image: linear-gradient(to right, #000000, #FFD700 ) 1;
 }
 </style>
